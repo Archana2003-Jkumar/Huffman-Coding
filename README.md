@@ -7,27 +7,31 @@ To implement Huffman coding to compress the data using Python.
 
 ## Algorithm:
 ### Step1:
-<br>
-
-
+Import the required packages.
 ### Step2:
-<br>
+Create a class nodetree and do the operation.
 
-### Step3:
-<br>
+### Step3: 
+Create a function and count the frequency.
 
 ### Step4:
-<br>
+Print the output using while loop.
 
 ### Step5:
-<br>
+Display the results and end the program.
 
  
 ## Program:
 ```
 # Get the input String
+```
+```
 string = 'from robomaster import robot'
+```
+```
 # Create tree nodes
+```
+```
 212221230007 Archana priya
 class NodeTree(object):
     
@@ -37,9 +41,11 @@ class NodeTree(object):
     def children(self):
         return(self.left,self.right)
 
-
+```
+```
 # Main function to implement huffman coding
-
+```
+```
 def huffcodetree(node, left=True,binString=''):
         if type(node) is str:
             return{node : binString}
@@ -49,9 +55,11 @@ def huffcodetree(node, left=True,binString=''):
         d.update(huffcodetree(r,False,binString + '1'))
         return d
         
-
+```
+```
 # Calculate frequency of occurrence
-
+```
+```
 
 freq = {}
 for c in string:
@@ -61,9 +69,11 @@ for c in string:
         freq[c] = 1
 freq = sorted(freq.items(),key = lambda x: x[1],reverse = True)
 nodes = freq
-
+```
+```
 # Print the characters and its huffmancode
-
+```
+```
 while len(nodes)>1:
     (key1 , c1) = nodes[-1]
     (key2 , c2) = nodes[-2]
@@ -82,9 +92,8 @@ for(char,frequency) in freq:
 
 ```
 ## Output:
-
 ### Print the characters and its huffmancode
-
+![image](https://github.com/Archana2003-Jkumar/Huffman-Coding/assets/93427594/46204048-15b4-45d7-94f9-77c888113e99)
 
 ## Result
 Thus the huffman coding was implemented to compress the data using python programming.
